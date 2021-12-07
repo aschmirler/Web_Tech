@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% block title %}Comedy{% endblock %}
+
+{% block content %}
+    <h1>Comedy</h1>
+    <style>
+        ul {color: cornflowerblue; margin-left: auto}
+    </style>
+    <ul>
+        {% for mv in movies %}
+            <p style="font-size: 22px"><a href = "/{{mv.text}}">{{mv.text}}</a></p>
+        {% endfor %}
+    </ul>
+{% endblock %}

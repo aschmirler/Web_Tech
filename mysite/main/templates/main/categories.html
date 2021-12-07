@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% block title %}Movie Categories{% endblock %}
+
+{% block content %}
+    <h1>Categories</h1>
+    <style>
+        ul {color: cornflowerblue; margin-left: auto}
+    </style>
+    <ul>
+        {% for c in cat %}
+            <p style="font-size: 22px"><a href = "/{{c.name}}">{{c.name}}</a></p>
+        {% endfor %}
+    </ul>
+{% endblock %}

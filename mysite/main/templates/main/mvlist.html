@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+{% block title %}Movie Categories{% endblock %}
+
+{% block content %}
+    <h1>{{mv.name}}</h1>
+    <ul>
+        {% for movie in mv.movie_set.all %}
+            <li>{{movie.text}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
